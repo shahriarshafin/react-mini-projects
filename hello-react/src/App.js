@@ -1,9 +1,13 @@
 import './App.css';
+// import { About, Contact, Home } from './pages/export';
+import { About } from './pages/export';
 
 function App() {
 	return (
 		<>
-			<h1>Get Started!</h1>
+			{/* <Home />
+			<Contact /> */}
+			<About />
 		</>
 	);
 }
