@@ -12,3 +12,22 @@ p {
 	display: flex;
 	justify-content: center;
 }
+.box-wrapper {
+	padding-left: 15px;
+	padding-right: 15px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	color: #f8ab97;
+	border-radius: 10px;
+	height: 100px;
+	/* width: 400px; */
+	background-color: #ffe7c5;
+}
+.box-wrapperr {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

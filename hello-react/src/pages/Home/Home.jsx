@@ -7,9 +7,18 @@ const home = 'Home';
 const date = new Date().toLocaleDateString();
 const time = new Date().toLocaleTimeString();
 
-const styles = {
-	color: 'red',
-};
+let today = new Date().getHours();
+let greeting = '';
+if (today >= 6 && today <= 12) {
+	greeting = 'Morning';
+} else if (today >= 12 && today <= 17) {
+	greeting = 'Afternoon';
+} else if (today >= 17 && today <= 20) {
+	greeting = 'Evening';
+} else if (today >= 20 && today <= 24) {
+	greeting = 'Night';
+}
+
 const Home = () => {
 	return (
 		<div>
@@ -21,8 +30,11 @@ const Home = () => {
 			<p>
 				Clock Now : <span> {time} </span>
 			</p>
-			<h1 style={styles}>Shahriar Shafin</h1>
-			<p style={{ color: 'blue', fontSize: '3rem' }}>Shahriar Shafin</p>
+
+			<div className="box-wrapperr">
+				<div className="box-wrapper">Hello, Good {greeting}</div>
+			</div>
+
 			<Footer />
 		</div>
 	);
