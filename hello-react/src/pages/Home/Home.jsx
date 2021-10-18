@@ -3,7 +3,6 @@ import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Nav/Nav';
 import './Home.css';
 
-const home = 'Home';
 const date = new Date().toLocaleDateString();
 const time = new Date().toLocaleTimeString();
 
@@ -17,13 +16,15 @@ if (today >= 6 && today <= 12) {
 	greeting = 'Evening';
 } else if (today >= 20 && today <= 24) {
 	greeting = 'Night';
+} else {
+	greeting = 'to see you!';
 }
 
 const Home = () => {
 	return (
 		<div>
 			<Nav />
-			<h1>Home Sweet {home} </h1>
+			<h1>Home Sweet Home </h1>
 			<p>
 				Today's Date : <span> {date} </span>
 			</p>

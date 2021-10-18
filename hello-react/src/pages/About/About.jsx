@@ -7,7 +7,7 @@ const About = () => {
 	return (
 		<div>
 			<Nav />
-			<Card />
+			<Card name="Shahriar Shafin" status="UI / UX & Front-end Developer" />
 			<Footer />
 		</div>
 	);
