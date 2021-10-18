@@ -7,6 +7,9 @@ const home = 'Home';
 const date = new Date().toLocaleDateString();
 const time = new Date().toLocaleTimeString();
 
+const styles = {
+	color: 'red',
+};
 const Home = () => {
 	return (
 		<div>
@@ -18,6 +21,8 @@ const Home = () => {
 			<p>
 				Clock Now : <span> {time} </span>
 			</p>
+			<h1 style={styles}>Shahriar Shafin</h1>
+			<p style={{ color: 'blue', fontSize: '3rem' }}>Shahriar Shafin</p>
 			<Footer />
 		</div>
 	);
