@@ -1,8 +1,11 @@
 body {
-	background-color: #111111;
-	font-family: sans-serif;
-	margin: 0;
-	padding: 0;
-	color: whitesmoke;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	background-color: #1f1d2b;
+	height: 100%;
+}
+.main {
+	margin-left: 200px; /* Same as the width of the sidenav */
+	height: 100%;
+	background-color: #1f1d2b;
+	padding-left: 20px;
+	padding-right: 20px;
 }

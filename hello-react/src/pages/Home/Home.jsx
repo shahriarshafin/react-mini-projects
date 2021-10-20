@@ -1,43 +1,49 @@
 import React from 'react';
-import Footer from '../../components/Footer/Footer';
+import '../../assets/bootstrap.css';
 import Nav from '../../components/Nav/Nav';
 import './Home.css';
 
 const date = new Date().toLocaleDateString();
 const time = new Date().toLocaleTimeString();
-
-let today = new Date().getHours();
+const hours = new Date().getHours();
 let greeting = '';
-if (today >= 6 && today <= 12) {
-	greeting = 'Morning';
-} else if (today >= 12 && today <= 17) {
-	greeting = 'Afternoon';
-} else if (today >= 17 && today <= 20) {
-	greeting = 'Evening';
-} else if (today >= 20 && today <= 24) {
-	greeting = 'Night';
-} else {
-	greeting = 'to see you!';
-}
 
 const Home = () => {
+	if (hours >= 6 && hours <= 12) {
+		greeting = 'Morning';
+	} else if (hours >= 12 && hours <= 17) {
+		greeting = 'Afternoon';
+	} else if (hours >= 17 && hours <= 20) {
+		greeting = 'Evening';
+	} else if (hours >= 20 && hours <= 24) {
+		greeting = 'Night';
+	} else {
+		greeting = 'to see you!';
+	}
 	return (
-		<div>
+		<>
 			<Nav />
-			<h1>Home Sweet Home </h1>
-			<p>
-				Today's Date : <span> {date} </span>
-			</p>
-			<p>
-				Clock Now : <span> {time} </span>
-			</p>
-
-			<div className="box-wrapperr">
-				<div className="box-wrapper">Hello, Good {greeting}</div>
+			<div className="main">
+				<div className="container">
+					<h1 className="text-light mx-auto m-custom">
+						Let's Learn <span className="text-blue">React</span>
+					</h1>
+					<div className="text-light my-4">
+						<h5>
+							Today's Date : <span className="text-purple"> {date} </span>
+						</h5>
+						<h5>
+							Current Time : <span className="text-purple"> {time} </span>
+						</h5>
+					</div>
+					<div className="p-5">
+						<div className="header">
+							<h2 className="header-text">Hello, Good {greeting} 😀</h2>
+						</div>
+					</div>
+				</div>
 			</div>
-
-			<Footer />
-		</div>
+		</>
 	);
 };
 

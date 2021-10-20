@@ -1,6 +1,5 @@
 import React from 'react';
-import '../../assets/data/data.json';
-import '../../bootstrap.css';
+import '../../assets/bootstrap.css';
 
 const Card = () => {
 	fetch('./data/data.json')
@@ -11,7 +10,7 @@ const Card = () => {
 	console.log('hello');
 
 	return (
-		<div>
+		<>
 			<div className="col-6 col-lg-4 col-md-4">
 				<div className="snip-card mt-5 p-2">
 					<div className="d-flex justify-content-between">
@@ -38,7 +37,7 @@ const Card = () => {
 					<p className="snip-card-cap my-2">Lorem ipsum dolor sit amet.</p>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

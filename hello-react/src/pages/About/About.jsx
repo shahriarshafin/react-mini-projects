@@ -1,15 +1,18 @@
 import React from 'react';
+import '../../assets/bootstrap.css';
 import Card from '../../components/Card/Card';
-import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Nav/Nav';
-
 const About = () => {
 	return (
-		<div>
+		<>
 			<Nav />
-			<Card name="Shahriar Shafin" status="UI / UX & Front-end Developer" />
-			<Footer />
-		</div>
+			<div className="container">
+				<div className="row">
+					<Card />
+					<Card />
+				</div>
+			</div>
+		</>
 	);
 };
 
