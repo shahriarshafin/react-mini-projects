@@ -1,8 +1,17 @@
 .upper-nav {
-	/* margin-left: 200px; */
 	position: fixed;
 	top: 0;
 	width: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #6c5ecf;
+	color: #fff;
+	padding-left: 32px;
+	padding-right: 32px;
 }
 .upper-nav ul {
 	list-style-type: none;
@@ -14,11 +23,6 @@
 
 .upper-nav li {
 	float: left;
-	border-right: 1px solid #bbb;
-}
-
-.upper-nav li:last-child {
-	border-right: none;
 }
 
 .upper-nav li a {
@@ -58,8 +62,8 @@
 .sidenav .link:hover {
 	color: #f1f1f1;
 }
-.sidenav .active {
-	color: #f1f1f1;
+.isActive {
+	color: white !important;
 	background-color: #6c5ecf;
 }
 @media screen and (max-height: 450px) {

@@ -1,50 +1,56 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Nav.css';
 const Nav = () => {
 	return (
 		<>
-			<div className="upper-nav">
+			<div className='upper-nav'>
+				<div class='logo'>MUO</div>
 				<ul>
 					<li>
-						<Link to="#home">Home</Link>
+						<NavLink to='/'>Home</NavLink>
 					</li>
 					<li>
-						<Link to="#news">News</Link>
+						<NavLink to='/structures'>Structures</NavLink>
 					</li>
 					<li>
-						<Link to="#contact">Contact</Link>
+						<NavLink to='#contact'>Contact</NavLink>
 					</li>
 					<li>
-						<Link to="#ainkbout">About</Link>
+						<NavLink to='#ainkbout'>About</NavLink>
 					</li>
 				</ul>
 			</div>
-			<div className="sidenav">
-				<Link to="#" className="link active">
+			<div className='sidenav'>
+				<NavLink activeClassName='isActive' exact to='/' className='link'>
 					Home
-				</Link>
-				<Link to="#" className="link">
+				</NavLink>
+				<NavLink
+					activeClassName='isActive'
+					exact
+					to='/structures'
+					className='link'
+				>
+					Structures
+				</NavLink>
+				<NavLink to='#' className='link'>
 					Contact
-				</Link>
-				<Link to="#" className="link">
+				</NavLink>
+				<NavLink to='#' className='link'>
 					Contact
-				</Link>
-				<Link to="#" className="link">
+				</NavLink>
+				<NavLink to='#' className='link'>
 					Contact
-				</Link>
-				<Link to="#" className="link">
+				</NavLink>
+				<NavLink to='#' className='link'>
 					Contact
-				</Link>
-				<Link to="#" className="link">
+				</NavLink>
+				<NavLink to='#' className='link'>
 					Contact
-				</Link>
-				<Link to="#" className="link">
+				</NavLink>
+				<NavLink to='#' className='link'>
 					Contact
-				</Link>
-				<Link to="#" className="link">
-					Contact
-				</Link>
+				</NavLink>
 			</div>
 		</>
 	);
