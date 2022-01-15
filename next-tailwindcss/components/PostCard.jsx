@@ -1,14 +1,14 @@
 import Link from 'next/link';
 
 const PostCard = (props) => {
-	const { title, description } = props;
+	const { title, description, postLink } = props;
 	return (
 		<>
 			<div className='p-10'>
 				<div className='w-full rounded overflow-hidden shadow-lg h-full'>
 					<div className='px-4 py-2'>
 						<div className='font-bold text-xl mb-2'>
-							<Link href='/'>
+							<Link href={postLink}>
 								<a>{title}</a>
 							</Link>
 						</div>

@@ -22,6 +22,7 @@ const index = ({ posts }) => {
 							key={post.id}
 							title={post.title}
 							description={post.body}
+							postLink={`/posts/${post.id}`}
 						/>
 					))}
 				</div>
