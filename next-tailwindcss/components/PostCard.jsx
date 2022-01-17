@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const PostCard = (props) => {
-	const { title, description, postLink } = props;
+	const { title, description, postLink, postNo } = props;
 	return (
 		<>
 			<div className='p-10'>
@@ -15,13 +15,13 @@ const PostCard = (props) => {
 						<p className='text-gray-700 text-base'>{description}</p>
 					</div>
 					<div className='px-6 pt-4 pb-2'>
-						<span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
-							#photography
+						<span className='inline-block bg-amber-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+							#{postNo}
 						</span>
-						<span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+						<span className='inline-block bg-green-300 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
 							#travel
 						</span>
-						<span className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+						<span className='inline-block bg-red-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
 							#winter
 						</span>
 					</div>

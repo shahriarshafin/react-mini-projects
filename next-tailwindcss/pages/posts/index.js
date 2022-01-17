@@ -20,6 +20,7 @@ const index = ({ posts }) => {
 					{posts.map((post) => (
 						<PostCard
 							key={post.id}
+							postNo={post.id}
 							title={post.title}
 							description={post.body}
 							postLink={`/posts/${post.id}`}
