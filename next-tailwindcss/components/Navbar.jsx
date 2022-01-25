@@ -42,7 +42,9 @@ const Navbar = () => {
 						</Link>
 					</div>
 					<h2 className='font-medium text-gray-500 hover:text-gray-900 px-2'>
-						Contact
+						<Link href='/contact'>
+							<a>Contact</a>
+						</Link>
 					</h2>
 				</div>
 			</nav>
