@@ -33,8 +33,33 @@ const test = () => {
 	const P3 = process3;
 	const P4 = process4;
 
-	const totalBursts = P1 + P2 + P3 + P4;
-	const avgTime = (0 + P1 + (P1 + P2) + (P1 + P2 + P3)) / 4;
+	const obj = {
+		p1: process1,
+		p2: process2,
+		p3: process3,
+		p4: process4,
+	};
+	console.log(obj);
+	// sort the keys to assending order via values and store in array
+	const sortedKeys = Object.keys(obj)
+
+		.sort((a, b) => obj[a] - obj[b])
+		.map((key) => parseInt(key.slice(1)));
+	console.log(sortedKeys);
+
+	const processArr = [P1, P2, P3, P4];
+	processArr.sort(function (a, b) {
+		return a - b;
+	});
+	console.log(processArr);
+
+	const ps1 = processArr[0];
+	const ps2 = processArr[1];
+	const ps3 = processArr[2];
+	const ps4 = processArr[3];
+
+	const totalBursts = ps1 + ps2 + ps3 + ps4;
+	const avgTime = (0 + ps1 + (ps1 + ps2) + (ps1 + ps2 + ps3)) / 4;
 	const getPercentage = (processNo) => {
 		return (processNo / totalBursts) * 100;
 	};
@@ -42,7 +67,7 @@ const test = () => {
 		<>
 			<Container fluid='xxl'>
 				<div className='pt-4'>
-					<h1 className='text-center mb-3'>First Come First Serve</h1>
+					<h1 className='text-center mb-3'>Shortest Job First</h1>
 					<Row>
 						<Col md={2}>
 							<PageLinks />
@@ -70,26 +95,26 @@ const test = () => {
 							</Table>
 
 							<h4>
-								The average waiting time will be = (0 + {P1} + {P1 + P2} +{' '}
-								{P1 + P2 + P3} )/ 4 = {avgTime} ms
+								The average waiting time will be = (0 + {ps1} + {ps1 + ps2} +{' '}
+								{ps1 + ps2 + ps3} )/ 4 = {avgTime} ms
 							</h4>
 							<h5 className='mt-4'>
 								This is the GANTT chart for the above process :
 							</h5>
 							<ProgressBar
 								stepOne={'0'}
-								percentOne={getPercentage(P1)}
-								label1={'P1'}
-								stepTwo={P1}
-								percentTwo={getPercentage(P2)}
-								label2={'P2'}
-								stepThree={P1 + P2}
-								percentThree={getPercentage(P3)}
-								label3={'P3'}
-								stepFour={P1 + P2 + P3}
-								percentFour={getPercentage(P4)}
-								label4={'P4'}
-								stepFive={P1 + P2 + P3 + P4}
+								percentOne={getPercentage(ps1)}
+								label1={'P' + sortedKeys[0]}
+								stepTwo={ps1}
+								percentTwo={getPercentage(ps2)}
+								label2={'P' + sortedKeys[1]}
+								stepThree={ps1 + ps2}
+								percentThree={getPercentage(ps3)}
+								label3={'P' + sortedKeys[2]}
+								stepFour={ps1 + ps2 + ps3}
+								percentFour={getPercentage(ps4)}
+								label4={'P' + sortedKeys[3]}
+								stepFive={ps1 + ps2 + ps3 + ps4}
 							/>
 						</Col>
 

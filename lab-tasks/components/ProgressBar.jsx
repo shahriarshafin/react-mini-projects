@@ -11,6 +11,10 @@ const Progress = (props) => {
 		stepFour,
 		percentFour,
 		stepFive,
+		label1,
+		label2,
+		label3,
+		label4,
 	} = props;
 	return (
 		<>
@@ -23,19 +27,48 @@ const Progress = (props) => {
 				}}
 			>
 				<h4>{stepOne}</h4>
-				<ProgressBar variant='success' animated key={1} now={percentOne} />
+				<ProgressBar
+					style={{
+						fontSize: '20px',
+					}}
+					variant='success'
+					animated
+					key={1}
+					now={percentOne}
+					label={`${label1}`}
+				/>
 				<h4>{stepTwo}</h4>
-				<ProgressBar variant='warning' key={2} now={percentTwo} />
+				<ProgressBar
+					style={{
+						fontSize: '20px',
+					}}
+					variant='warning'
+					key={2}
+					now={percentTwo}
+					label={`${label2}`}
+				/>
 				<h4>{stepThree}</h4>
 				<ProgressBar
+					style={{
+						fontSize: '20px',
+					}}
 					striped
 					variant='danger'
 					animated
 					now={percentThree}
 					key={3}
+					label={`${label3}`}
 				/>
 				<h4>{stepFour}</h4>
-				<ProgressBar variant='info' now={percentFour} key={3} />
+				<ProgressBar
+					style={{
+						fontSize: '20px',
+					}}
+					variant='info'
+					now={percentFour}
+					key={3}
+					label={`${label4}`}
+				/>
 				<h4>{stepFive}</h4>
 			</ProgressBar>
 		</>
