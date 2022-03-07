@@ -18,8 +18,8 @@ const contact = () => {
 		// console.log(name, value);
 	};
 
-	const handleSubmit = () => {
-		event.preventDefault();
+	const handleSubmit = (e) => {
+		e.preventDefault();
 		const newRecord = { ...record };
 		setUserFeedback([...userFeedback, newRecord]);
 		setRecord({
@@ -28,7 +28,9 @@ const contact = () => {
 			userMail: '',
 			userMsg: '',
 		});
-		console.table(userFeedback);
+
+		const newArr = [...userFeedback, newRecord];
+		console.log(newArr);
 	};
 
 	// const handleSubmit = async () => {
@@ -139,6 +141,15 @@ const contact = () => {
 						value='Submit'
 					></input>
 				</form>
+
+				{userFeedback.map((item) => {
+					return (
+						<>
+							{/* {console.log(item)} */}
+							<h1>{'jj'}</h1>
+						</>
+					);
+				})}
 			</div>
 		</>
 	);

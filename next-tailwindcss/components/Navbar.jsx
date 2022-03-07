@@ -23,9 +23,9 @@ const Navbar = () => {
 							</a>
 						</Link>
 
-						<Link href='/'>
+						<Link href='/todo'>
 							<a className='font-medium text-gray-500 hover:text-gray-900 px-2'>
-								Services
+								Todo
 							</a>
 						</Link>
 

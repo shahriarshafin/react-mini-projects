@@ -9,7 +9,7 @@ const index = () => {
 
 	useEffect(async () => {
 		const response = await fetch(
-			`https://jsonplaceholder.typicode.com/posts?_page=${pageNo}`
+			`https://jsonplaceholder.typicode.com/posts?_page=${pageNo}&_limit=12`
 		);
 		const users = await response.json();
 		setPostsToShow(users);

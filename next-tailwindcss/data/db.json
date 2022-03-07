@@ -1,27 +1,10 @@
 {
-  "feedback": [
-    {
-      "firstName": "Shafin",
-      "lastName": "---",
-      "userMail": "p--",
-      "userMsg": "---"
-    },
-    {
-      "id": "01",
-      "firstName": "Shafin",
-      "lastName": "---",
-      "userMail": "p--",
-      "userMsg": "---"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+	"botchat": [
+		{
+			"key": "13",
+			"firstName": "Shafin",
+			"lastName": "---"
+		},
+		{ "key": "27", "firstName": "Nafinn", "lastName": "---" }
+	]
 }
