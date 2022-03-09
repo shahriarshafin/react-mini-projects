@@ -1,14 +1,26 @@
+import { useWindowSize } from '@react-hook/window-size';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import Confetti from 'react-confetti';
 import { IoCheckbox, IoTrashBin } from 'react-icons/io5';
+import useSound from 'use-sound';
 import Heading from '../../components/Heading';
+
+const cheeringSound = '/sounds/cheering.mp3';
 
 const Index = () => {
 	const [item, setItem] = useState('');
 	const [data, setData] = useState([]);
 	const [book, setBook] = useState('');
 	const [bookmark, setBookmark] = useState([]);
+
+	const [width, height] = useWindowSize();
+	const [show, setShow] = useState(false);
+	const [playCheeringSound] = useSound(cheeringSound);
+
+	const handleShow = (toggle) => {
+		setShow(toggle);
+	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -24,10 +36,18 @@ const Index = () => {
 				return index !== id;
 			})
 		);
+
+		if (data.length === 1) {
+			handleShow(true);
+			playCheeringSound();
+			setTimeout(() => {
+				handleShow(false);
+			}, 5500);
+		}
 	};
 
 	const deleteCompleted = (id) => {
-		console.log(id);
+		// console.log(id);
 		setBookmark(
 			bookmark.filter((elem, index) => {
 				return index !== id;
@@ -51,8 +71,8 @@ const Index = () => {
 	};
 
 	return (
-		<>
-			<Confetti width={100} height={100} />
+		<div>
+			<Confetti width={width} height={height} recycle={show} />
 
 			<Heading text={'The Todo 📃'} />
 			<form onSubmit={handleSubmit} className='flex justify-center mt-5'>
@@ -132,7 +152,7 @@ const Index = () => {
 					<h2 className='text-center text-2xl'>Ekhno Vabinai</h2>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 
